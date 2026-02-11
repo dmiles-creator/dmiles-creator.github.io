@@ -39,7 +39,10 @@
       --font-serif: 'Playfair Display', Georgia, serif;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
 
     body {
       font-family: var(--font-sans);
@@ -49,6 +52,7 @@
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+      max-width: 100vw;
     }
 
     /* ===== LAYOUT ===== */
@@ -128,7 +132,6 @@
       align-items: center;
       padding: 140px 0 80px;
       position: relative;
-      overflow: visible;
       border-bottom: 1px solid var(--border);
     }
 
@@ -136,10 +139,10 @@
       content: '';
       position: absolute;
       top: -200px;
-      right: -200px;
-      width: 600px;
+      right: 0;
+      width: min(600px, 100%);
       height: 600px;
-      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      background: radial-gradient(circle at 80% 50%, var(--accent-glow) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -198,11 +201,11 @@
       font-family: var(--font-serif);
       font-size: clamp(44px, 5.5vw, 68px);
       font-weight: 600;
-      line-height: 1.2;
+      line-height: 1.25;
       letter-spacing: -0.03em;
       color: var(--text-primary);
       margin-bottom: 28px;
-      overflow: visible;
+      padding-bottom: 4px;
     }
 
     .hero h1 span {
