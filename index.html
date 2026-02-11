@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drew Miles | AI &amp; Data Governance Executive</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Drew Miles is an AI & Data Governance executive helping enterprises deploy AI responsibly at scale. CISA certified. Former PwC. Fortune 100 experience.">
+  <meta property="og:title" content="Drew Miles | AI & Data Governance Executive">
+  <meta property="og:description" content="Enterprise AI & Data Governance Leader. Enabling responsible AI at scale for Fortune 100 organizations.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Drew Miles | AI & Data Governance Executive">
+  <meta name="twitter:description" content="Enterprise AI & Data Governance Leader. Enabling responsible AI at scale for Fortune 100 organizations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-primary: #07080d;
+      --bg-secondary: #0e1018;
+      --bg-card: #12141d;
+      --bg-card-hover: #181b27;
+      --border: #1e2235;
+      --border-accent: #2a3050;
+      --text-primary: #e8eaf0;
+      --text-secondary: #9ba1b8;
+      --text-muted: #636a84;
+      --accent: #5b8af0;
+      --accent-dim: #3d6ad4;
+      --accent-glow: rgba(91, 138, 240, 0.12);
+      --gold: #c9a84c;
+      --gold-dim: rgba(201, 168, 76, 0.15);
+      --success: #4ade80;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    section {
+      padding: 96px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type { border-bottom: none; }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(7, 8, 13, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 72px;
+    }
+
+    .nav-brand {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover { color: var(--text-primary); }
+
+    .nav-mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 72px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: var(--gold-dim);
+      border: 1px solid rgba(201, 168, 76, 0.3);
+      border-radius: 100px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+    }
+
+    .hero-label::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(48px, 6vw, 72px);
+      font-weight: 600;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      display: block;
+      background: linear-gradient(135deg, var(--accent) 0%, #8b5cf6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      color: var(--text-secondary);
+      max-width: 600px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .hero-credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 48px;
+    }
+
+    .credential-tag {
+      padding: 8px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      letter-spacing: 0.01em;
+    }
+
+    .credential-tag strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      border: none;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-dim);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 20px rgba(91, 138, 240, 0.25);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-accent);
+    }
+
+    .btn-outline:hover {
+      color: var(--text-primary);
+      border-color: var(--text-muted);
+      background: var(--bg-card);
+    }
+
+    /* ===== SECTION HEADERS ===== */
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 4vw, 44px);
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 20px;
+    }
+
+    .section-desc {
+      font-size: 17px;
+      color: var(--text-secondary);
+      max-width: 640px;
+      line-height: 1.7;
+      margin-bottom: 56px;
+    }
+
+    /* ===== ABOUT ===== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .about-text p strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .stat-card {
+      padding: 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: all 0.2s ease;
+    }
+
+    .stat-card:hover {
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+    }
+
+    .stat-number {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    /* ===== EXPERTISE ===== */
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .expertise-card {
+      padding: 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .expertise-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    .expertise-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--accent-glow);
+      border: 1px solid rgba(91, 138, 240, 0.2);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      font-size: 22px;
+    }
+
+    .expertise-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .expertise-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    /* ===== MEDIA / PRESS ===== */
+    .media-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .media-card {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 24px;
+      align-items: center;
+      padding: 28px 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .media-card:hover {
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+    }
+
+    .media-outlet {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      min-width: 140px;
+    }
+
+    .media-info h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .media-info p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .media-date {
+      font-size: 13px;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .media-placeholder {
+      text-align: center;
+      padding: 64px 32px;
+      background: var(--bg-card);
+      border: 1px dashed var(--border-accent);
+      border-radius: 12px;
+    }
+
+    .media-placeholder p {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+
+    .media-placeholder .coming-label {
+      display: inline-block;
+      padding: 6px 14px;
+      background: var(--gold-dim);
+      border: 1px solid rgba(201, 168, 76, 0.25);
+      border-radius: 100px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    /* ===== THOUGHT LEADERSHIP ===== */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .article-card {
+      padding: 32px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.2s ease;
+    }
+
+    .article-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    .article-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      background: var(--accent-glow);
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 16px;
+      width: fit-content;
+    }
+
+    .article-card h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .article-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      flex-grow: 1;
+    }
+
+    .article-card .article-meta {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    /* ===== CONTACT ===== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .contact-text p {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 32px;
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+    }
+
+    .contact-method:hover {
+      border-color: var(--border-accent);
+      background: var(--bg-card-hover);
+    }
+
+    .contact-method-icon {
+      width: 40px;
+      height: 40px;
+      background: var(--accent-glow);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .contact-method-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .contact-method-value {
+      font-size: 15px;
+      color: var(--text-primary);
+      font-weight: 500;
+    }
+
+    .contact-topics {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-topic-card {
+      padding: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .contact-topic-card h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+    }
+
+    .contact-topic-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-content p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--text-primary); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      section { padding: 64px 0; }
+
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: block; }
+
+      .nav-links.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--bg-primary);
+        border-bottom: 1px solid var(--border);
+        padding: 24px 32px;
+        gap: 20px;
+      }
+
+      .hero { min-height: auto; padding: 120px 0 80px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .expertise-grid { grid-template-columns: 1fr; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      .media-card {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .media-outlet { min-width: auto; }
+
+      .hero-cta { flex-direction: column; }
+      .btn { justify-content: center; }
+
+      .footer-content {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="container">
+      <a href="#" class="nav-brand">Drew Miles</a>
+      <button class="nav-mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#media">Media</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-label">AI &amp; Data Governance Executive</div>
+        <h1>
+          Building the frameworks
+          <span>that let enterprises deploy AI responsibly.</span>
+        </h1>
+        <p class="hero-subtitle">
+          I help organizations architect AI governance, data strategy, and responsible AI programs
+          that turn regulatory complexity into competitive advantage.
+        </p>
+        <div class="hero-credentials">
+          <div class="credential-tag"><strong>CISA</strong> Certified</div>
+          <div class="credential-tag"><strong>Fortune 100</strong> Experience</div>
+          <div class="credential-tag"><strong>Former PwC</strong> Senior Manager</div>
+          <div class="credential-tag"><strong>Global Teams</strong> US, UK, India</div>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get in Touch &#8594;</a>
+          <a href="https://linkedin.com/in/drewpmiles" target="_blank" rel="noopener" class="btn btn-outline">LinkedIn Profile</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label">About</p>
+          <h2 class="section-title">AI and Data Governance at enterprise scale.</h2>
+          <p>
+            I sit at the intersection of <strong>AI governance and data strategy</strong> &mdash;
+            partnering with C-suite leaders and Audit Committees to architect the policies,
+            data architectures, and risk frameworks that turn complex regulatory landscapes into
+            competitive advantages.
+          </p>
+          <p>
+            My track record spans <strong>Fortune 100 global brands</strong> including Apple,
+            Capital One, Coca-Cola, and Bristol-Myers Squibb, where I built enterprise-scale
+            programs in TPRM, data governance, and AI risk management. Before my current role
+            leading AI governance at a hyper-growth AI technology company, I spent nearly a
+            decade at <strong>PwC</strong> advising the world&rsquo;s most complex organizations.
+          </p>
+          <p>
+            I build programs that enable responsible AI deployment &mdash; not programs that
+            slow innovation down. That distinction is why organizations trust me to architect
+            governance frameworks at the executive level.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <div class="stat-number">F100</div>
+            <div class="stat-label">Enterprise client portfolio</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">30+</div>
+            <div class="stat-label">Global team members led</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Fortune 500 engagements</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">9 yrs</div>
+            <div class="stat-label">PwC Cybersecurity &amp; Privacy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section id="expertise">
+    <div class="container">
+      <p class="section-label">Areas of Expertise</p>
+      <h2 class="section-title">Where AI meets governance.</h2>
+      <p class="section-desc">
+        Focused on the convergence of AI governance and data strategy &mdash; the fastest-growing
+        and highest-impact area of enterprise risk leadership.
+      </p>
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <div class="expertise-icon">&#9878;</div>
+          <h3>Enterprise AI Governance</h3>
+          <p>Building AI governance programs from the ground up, aligned to NIST AI RMF, ISO 27001, EU AI Act, and global regulatory requirements.</p>
+        </div>
+        <div class="expertise-card">
+          <div class="expertise-icon">&#9881;</div>
+          <h3>Data Governance &amp; Architecture</h3>
+          <p>Defining data architecture standards, data lineage requirements, and governance frameworks that ensure AI model integrity and scalability.</p>
+        </div>
+        <div class="expertise-card">
+          <div class="expertise-icon">&#10004;</div>
+          <h3>Responsible AI</h3>
+          <p>Designing frameworks spanning bias detection, model risk, algorithmic fairness, and ethical deployment for enterprise AI systems.</p>
+        </div>
+        <div class="expertise-card">
+          <div class="expertise-icon">&#9741;</div>
+          <h3>Third-Party AI Risk</h3>
+          <p>Enterprise-scale TPRM programs with AI vendor risk assessment, contractual governance, and supply chain risk frameworks.</p>
+        </div>
+        <div class="expertise-card">
+          <div class="expertise-icon">&#9733;</div>
+          <h3>Regulatory Strategy</h3>
+          <p>Translating EU AI Act, SEC Cyber Rules, GDPR, and emerging AI regulation into strategic frameworks that accelerate market entry.</p>
+        </div>
+        <div class="expertise-card">
+          <div class="expertise-icon">&#9670;</div>
+          <h3>Executive Risk Architecture</h3>
+          <p>Board-level risk reporting, executive dashboards, and governance operating models for C-suite and Audit Committee visibility.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA & PRESS -->
+  <section id="media">
+    <div class="container">
+      <p class="section-label">Media &amp; Press</p>
+      <h2 class="section-title">In the news.</h2>
+      <p class="section-desc">
+        Expert commentary on AI governance, data strategy, responsible AI, and enterprise risk.
+        Available for interviews, panels, and expert quotes.
+      </p>
+
+      <!-- INSTRUCTIONS: To add a real media mention, copy this template and uncomment it:
+
+      <div class="media-grid">
+        <a href="URL_HERE" target="_blank" rel="noopener" class="media-card">
+          <div class="media-outlet">OUTLET NAME</div>
+          <div class="media-info">
+            <h3>Article Title Here</h3>
+            <p>Brief description or your quote from the article</p>
+          </div>
+          <div class="media-date">Month 2026</div>
+        </a>
+      </div>
+
+      Then remove the placeholder block below.
+      -->
+
+      <div class="media-placeholder">
+        <div class="coming-label">Available for Commentary</div>
+        <p>Expert source for AI governance, responsible AI, data strategy, and enterprise risk management.<br>
+        Reach out for interviews, podcast appearances, panel discussions, and expert quotes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THOUGHT LEADERSHIP -->
+  <section id="writing">
+    <div class="container">
+      <p class="section-label">Thought Leadership</p>
+      <h2 class="section-title">Perspectives on AI &amp; Data.</h2>
+      <p class="section-desc">
+        Writing about the convergence of AI governance, data strategy, and responsible
+        enterprise AI deployment.
+      </p>
+
+      <div class="articles-grid">
+
+        <!-- INSTRUCTIONS: Replace href="#" with actual URLs when articles are published.
+             Add new article cards by copying this template. -->
+
+        <a href="#" class="article-card">
+          <div class="article-tag">AI Governance</div>
+          <h3>Why You Can&rsquo;t Govern AI Without Governing Data</h3>
+          <p>The convergence of AI governance and data strategy is creating a new class of
+            executive responsibility. Organizations that treat these as separate functions are
+            building on unstable foundations.</p>
+          <div class="article-meta">Coming Soon &middot; LinkedIn Article</div>
+        </a>
+
+        <a href="#" class="article-card">
+          <div class="article-tag">Enterprise Risk</div>
+          <h3>Third-Party AI Risk: Why Your Vendor Program Isn&rsquo;t Ready</h3>
+          <p>Lessons from building enterprise AI risk frameworks across Fortune 100
+            organizations &mdash; and why most vendor governance programs weren&rsquo;t
+            designed for the AI era.</p>
+          <div class="article-meta">Coming Soon &middot; LinkedIn Article</div>
+        </a>
+
+        <a href="#" class="article-card">
+          <div class="article-tag">Responsible AI</div>
+          <h3>The Board&rsquo;s Role in AI Governance: A Strategic Framework</h3>
+          <p>Audit Committees are asking the wrong questions about AI risk. Here&rsquo;s what
+            board-level AI governance should actually look like in 2026.</p>
+          <div class="article-meta">Coming Soon &middot; LinkedIn Article</div>
+        </a>
+
+        <a href="#" class="article-card">
+          <div class="article-tag">Data Strategy</div>
+          <h3>Data Architecture as Competitive Advantage in the AI Era</h3>
+          <p>Why enterprises that invest in data governance and architecture now will
+            dominate AI deployment &mdash; and why the rest will struggle to catch up.</p>
+          <div class="article-meta">Coming Soon &middot; LinkedIn Article</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <p class="section-label">Get in Touch</p>
+          <h2 class="section-title">Let&rsquo;s connect.</h2>
+          <div class="contact-text">
+            <p>
+              Interested in discussing AI governance strategy, responsible AI frameworks,
+              or enterprise data governance? I&rsquo;m always open to thoughtful conversations
+              with industry leaders, journalists, and organizations navigating the AI landscape.
+            </p>
+          </div>
+          <div class="contact-methods">
+            <a href="https://linkedin.com/in/drewpmiles" target="_blank" rel="noopener" class="contact-method">
+              <div class="contact-method-icon">in</div>
+              <div>
+                <div class="contact-method-label">LinkedIn</div>
+                <div class="contact-method-value">linkedin.com/in/drewpmiles</div>
+              </div>
+            </a>
+            <a href="mailto:drew@example.com" class="contact-method">
+              <div class="contact-method-icon">&#9993;</div>
+              <div>
+                <div class="contact-method-label">Email</div>
+                <div class="contact-method-value">drew@example.com</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="contact-topics">
+          <div class="contact-topic-card">
+            <h4>&#127908; Media &amp; Press Inquiries</h4>
+            <p>Available as an expert source on AI governance, responsible AI, data governance, regulatory strategy, and enterprise risk management.</p>
+          </div>
+          <div class="contact-topic-card">
+            <h4>&#127897; Speaking &amp; Panels</h4>
+            <p>Conference keynotes, panel discussions, and executive roundtables on AI governance, data strategy, and responsible AI at scale.</p>
+          </div>
+          <div class="contact-topic-card">
+            <h4>&#129309; Advisory &amp; Strategic Conversations</h4>
+            <p>Conversations about how organizations are scaling AI responsibly, building data governance functions, and navigating the AI regulatory landscape.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2026 Drew Miles. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="https://linkedin.com/in/drewpmiles" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Back to top &#8593;</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Smooth scroll for nav links and close mobile menu on click -->
+  <script>
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
