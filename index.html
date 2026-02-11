@@ -41,7 +41,6 @@
 
     html {
       scroll-behavior: smooth;
-      overflow-x: hidden;
     }
 
     body {
@@ -51,8 +50,14 @@
       line-height: 1.7;
       font-size: 16px;
       -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+
+    .page-wrapper {
+      width: 100%;
       overflow-x: hidden;
-      max-width: 100vw;
+      position: relative;
     }
 
     /* ===== LAYOUT ===== */
@@ -732,6 +737,7 @@
   </style>
 </head>
 <body>
+<div class="page-wrapper">
 
   <!-- NAVIGATION -->
   <nav>
@@ -1032,5 +1038,6 @@
     });
   </script>
 
+</div><!-- end page-wrapper -->
 </body>
 </html>
